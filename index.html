@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        //이벤트 내용 적용
+        console.log("내용 출력");
+        
+        var data = [
+            {"url":"http://google.com","text":"구글"},
+            {"url":"http://naver.com","text":"네이버"},
+            {"url":"http://daum.net","text":"다음"},
+            {"url":"http://gdu.co.kr", "text":"구디아카데미"}
+
+            
+        ];
+        
+        for(var i = 0; i < data.length; i++)
+        {
+            console.log(data[i]);
+            console.log(data[i].url);
+            console.log(data[i].text);
+            
+            var html = '<a href="'+ data[i].url +'" class="list-group-item active">' + data[i].text + ' item</a>';
+            $('#list').append(html); 
+        }
+        
+    });
+  /*******************************************
+  *$()      : Jqoury 함수를 나타낸다.
+  *document : <!DOCTYPE html> 웹문서를 나타낸다.
+  *ready()  : 타겟이 준비가 완료 되었다면 실행되는 함수
+  ********************************************/
+      
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Active Item in a List Group</h2>
+  <div class="list-group" id="list">
+<!--
+    <a href="#" class="list-group-item active">First item</a>
+    <a href="#" class="list-group-item">Second item</a>
+    <a href="#" class="list-group-item">Third item</a>
+-->
+  </div>
+</div>
+<script>
+    console.log("끝 부분");
+    
+</script>
+</body>
+</html>
